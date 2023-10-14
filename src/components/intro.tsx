@@ -8,7 +8,10 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "@/context/use-section-in-view";
 
 export function Intro() {
-	const { ref } = useSectionInView({ sectionName: "Home", amountForView: 0.5 });
+	const { ref } = useSectionInView({
+		sectionName: "Home",
+		amountForView: 0.5,
+	});
 
 	return (
 		<section
@@ -17,13 +20,15 @@ export function Intro() {
 			className="flex flex-col items-center justify-center mt-10 sm:mt-36 mb-20 px-2 scroll-mt-28"
 		>
 			<motion.div
-				className="relative mb-5"
+				className="relative mb-5 bg-white/40 
+				rounded-t-3xl rounded-tl-[5rem] rounded-b-3xl rounded-br-[5rem] 
+				border-8 border-black/10 overflow-hidden shadow-lg cursor-pointer"
 				initial={{ opacity: 0, y: 100 }}
 				animate={{ opacity: 1, y: 0 }}
 			>
-				<Image src="/15.jpg" alt="me" width={300} height={300} />
+				<Image src="/avatar.png" alt="me" width={300} height={300} />
 				<motion.span
-					className="absolute bottom-0 right-0 text-6xl"
+					className="absolute bottom-0 left-0 text-6xl"
 					initial={{ opacity: 0, scale: 0 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{
@@ -33,7 +38,7 @@ export function Intro() {
 						duration: 0.7,
 					}}
 				>
-					👋
+					😎
 				</motion.span>
 			</motion.div>
 

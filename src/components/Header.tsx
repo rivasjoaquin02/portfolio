@@ -11,7 +11,7 @@ export function Header() {
 
 	return (
 		<motion.header
-			className="fixed bottom-2 sm:top-6 left-1/2 z-[999]"
+			className="fixed bottom-2 sm:top-6 left-1/2 z-[999] h-fit"
 			initial={{
 				opacity: 0,
 				y: -100,
@@ -20,7 +20,6 @@ export function Header() {
 			animate={{
 				opacity: 1,
 				y: 0,
-				x: "-50%",
 			}}
 		>
 			<nav
@@ -37,7 +36,7 @@ export function Header() {
 							<Link
 								href={link.hash}
 								className="flex w-full items-center justify-center px-3  
-                                text-gray-500 text-[1rem] hover:text-gray-950"
+                                text-gray-500 text-[1rem] hover:text-gray-950 transition"
 								onClick={() => setActiveSection(link.name)}
 							>
 								<span className="hidden sm:block">

@@ -27,7 +27,7 @@ export function Skills() {
 		<section
 			ref={ref}
 			id="skills"
-			className="flex flex-col items-center justify-center mb-28 scroll-mt-28"
+			className="flex flex-col items-center justify-center mb-28 scroll-mt-28 px-8"
 		>
 			<SectionHeader>My toolchain</SectionHeader>
 			<ul className="flex flex-wrap gap-2 justify-center text-gray-800">

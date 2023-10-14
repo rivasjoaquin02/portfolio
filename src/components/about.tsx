@@ -19,7 +19,7 @@ export function About() {
 		<motion.section
 			ref={ref}
 			id="about"
-			className="text-center max-w-4xl px-8 sm:px-10 mb-28 scroll-mt-28"
+			className="text-center px-8 sm:px-10 mb-28 scroll-mt-28"
 			initial={{ opacity: 0, y: 100 }}
 			whileInView={{ opacity: 1, y: 0 }}
 			viewport={{ once: true }}
