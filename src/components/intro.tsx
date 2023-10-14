@@ -5,12 +5,16 @@ import { BsTriangleFill, BsLinkedin, BsGithub } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 
 import { motion } from "framer-motion";
+import { useSectionInView } from "@/context/use-section-in-view";
 
 export function Intro() {
+	const { ref } = useSectionInView({ sectionName: "Home", amountForView: 0.5 });
+
 	return (
 		<section
+			ref={ref}
 			id="#home"
-			className="flex flex-col items-center justify-center mb-20 px-2"
+			className="flex flex-col items-center justify-center mt-10 sm:mt-36 mb-20 px-2 scroll-mt-28"
 		>
 			<motion.div
 				className="relative mb-5"
@@ -69,14 +73,14 @@ export function Intro() {
 					</a>
 					<a
 						href="https://linkedin/"
-						className="text-gray-500 bg-white flex items-center px-5 py-3 rounded-lg cursor-pointer
+						className="text-gray-500 bg-white flex items-center px-5 py-4 rounded-lg cursor-pointer
                         hover:scale-[1.05] focus:scale-[1.05] active:scale-[initial] transition"
 					>
 						<BsLinkedin />
 					</a>
 					<a
 						href="https://github.com/rivasjoaquin02"
-						className="text-gray-500 bg-white flex items-center px-5 py-3 rounded-lg cursor-pointer
+						className="text-gray-500 bg-white flex items-center px-5 py-4 rounded-lg cursor-pointer
                         hover:scale-[1.05] focus:scale-[1.05] active:scale-[initial] transition
                         "
 					>

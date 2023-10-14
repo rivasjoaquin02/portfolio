@@ -4,6 +4,7 @@ import { skillsData } from "@/lib/data";
 import { SectionHeader } from "./section-header";
 
 import { motion } from "framer-motion";
+import { useSectionInView } from "@/context/use-section-in-view";
 
 const fadeInAnimationVariants = {
 	initial: {
@@ -20,10 +21,13 @@ const fadeInAnimationVariants = {
 };
 
 export function Skills() {
+	const { ref } = useSectionInView({ sectionName: "Skills", amountForView: 0.75 });
+
 	return (
 		<section
+			ref={ref}
 			id="skills"
-			className="flex flex-col items-center justify-center mb-28"
+			className="flex flex-col items-center justify-center mb-28 scroll-mt-28"
 		>
 			<SectionHeader>My toolchain</SectionHeader>
 			<ul className="flex flex-wrap gap-2 justify-center text-gray-800">

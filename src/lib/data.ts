@@ -20,34 +20,45 @@ import {
 	BiLogoRedux,
 	BiLogoTailwindCss,
 	BiDotsHorizontalRounded,
+	BiHomeAlt2,
+	BiSolidContact,
 } from "react-icons/bi";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiFastapi } from "react-icons/si";
+import { BsFillPersonFill, BsTools } from "react-icons/bs";
+import { AiOutlineAppstoreAdd } from "react-icons/ai";
+import { GrWorkshop } from "react-icons/gr";
 
 export const links = [
 	{
 		name: "Home",
 		hash: "#home",
-	},
-	{
-		name: "About",
-		hash: "#about",
-	},
-	{
-		name: "Projects",
-		hash: "#projects",
+		icon: React.createElement(BiHomeAlt2),
 	},
 	{
 		name: "Skills",
 		hash: "#skills",
+		icon: React.createElement(BsTools),
+	},
+	{
+		name: "Projects",
+		hash: "#projects",
+		icon: React.createElement(AiOutlineAppstoreAdd),
+	},
+	{
+		name: "About",
+		hash: "#about",
+		icon: React.createElement(BsFillPersonFill),
 	},
 	{
 		name: "Experience",
 		hash: "#experience",
+		icon: React.createElement(GrWorkshop),
 	},
 	{
 		name: "Contact",
 		hash: "#contact",
+		icon: React.createElement(BiSolidContact),
 	},
 ] as const;
 
