@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+import { Header } from "@/components/header";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -19,16 +19,16 @@ export default function RootLayout({
 		<html lang="en" className="!scroll-smooth">
 			<body
 				className={`${inter.className} 
-					relative bg-gray-50 h-[100rem] max-w-[60rem]`}
+					relative bg-gray-50 h-[100rem] max-w-screen-lg overflow-x-hidden mx-auto`}
 			>
 				<div
 					className="absolute -z-10 top-[-6rem] right-[11rem] 
-					bg-[#fd7940]/50 h-[31.25rem] w-[31.25rem] 
+					bg-[#fd7940]/30 h-[31.25rem] w-[31.25rem] 
 					rounded-full blur-[10rem] sm:w-[68.75rem]"
 				></div>
 				<div
 					className="absolute -z-10 top-[10rem] left-[20rem]
-					bg-[#bc13a4]/50 h-[31.25rem] w-[31.25rem] 
+					bg-[#bc13a4]/30 h-[31.25rem] w-[31.25rem] 
 					rounded-full blur-[10rem] sm:w-[68.75rem]"
 				></div>
 

@@ -1,0 +1,89 @@
+"use client";
+
+import Image from "next/image";
+import { BsTriangleFill, BsLinkedin, BsGithub } from "react-icons/bs";
+import { HiDownload } from "react-icons/hi";
+
+import { motion } from "framer-motion";
+
+export function Intro() {
+	return (
+		<section
+			id="#home"
+			className="flex flex-col items-center justify-center mb-20 px-2"
+		>
+			<motion.div
+				className="relative mb-5"
+				initial={{ opacity: 0, y: 100 }}
+				animate={{ opacity: 1, y: 0 }}
+			>
+				<Image src="/15.jpg" alt="me" width={300} height={300} />
+				<motion.span
+					className="absolute bottom-0 right-0 text-6xl"
+					initial={{ opacity: 0, scale: 0 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{
+						type: "spring",
+						stiffness: 125,
+						delay: 0.1,
+						duration: 0.7,
+					}}
+				>
+					👋
+				</motion.span>
+			</motion.div>
+
+			<motion.div
+				initial={{ opacity: 0, y: 100 }}
+				animate={{ opacity: 1, y: 0 }}
+			>
+				<h1 className="text-2xl font-black !leading-[1.5] sm:text-4xl lg:text-6xl mb-5 text-center">
+					Yet Another React Developer
+				</h1>
+				<p className="text-xl sm:text-2xl text-center mb-12 max-w-3xl">
+					Hello, I'm Joaquin. I'm a{" "}
+					<span className="underline font-bold">
+						front-end developer
+					</span>
+					. I enjoy building{" "}
+					<span className="italic">sites & apps</span>. My focus is{" "}
+					<span className="underline font-bold">React (Next.js)</span>
+				</p>
+
+				<div className="flex flex-col sm:flex-row gap-3 items-center justify-center px-10">
+					<a
+						href="#contact"
+						className="group flex gap-2 items-center bg-[#a21cb3] text-white font-normal px-6 py-3 rounded-lg cursor-pointer shadow-xl 
+                        hover:scale-[1.05] focus:scale-[1.05] active:scale-[initial] transition"
+					>
+						<BsTriangleFill className="group-hover:animate-spin-one-time " />{" "}
+						Contact me
+					</a>
+					<a
+						download=""
+						className="group flex gap-2 items-center bg-white font-normal px-6 py-3 rounded-lg cursor-pointer
+                        hover:scale-[1.05] focus:scale-[1.05] active:scale-[initial] transition"
+					>
+						Download CV{" "}
+						<HiDownload className="group-hover:animate-bounce transition" />
+					</a>
+					<a
+						href="https://linkedin/"
+						className="text-gray-500 bg-white flex items-center px-5 py-3 rounded-lg cursor-pointer
+                        hover:scale-[1.05] focus:scale-[1.05] active:scale-[initial] transition"
+					>
+						<BsLinkedin />
+					</a>
+					<a
+						href="https://github.com/rivasjoaquin02"
+						className="text-gray-500 bg-white flex items-center px-5 py-3 rounded-lg cursor-pointer
+                        hover:scale-[1.05] focus:scale-[1.05] active:scale-[initial] transition
+                        "
+					>
+						<BsGithub />
+					</a>
+				</div>
+			</motion.div>
+		</section>
+	);
+}

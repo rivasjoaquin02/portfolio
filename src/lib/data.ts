@@ -7,6 +7,23 @@ import corpcommentImg from "public/corpcomment.png";
 import rmtdevImg from "public/rmtdev.png";
 import wordanalyticsImg from "public/wordanalytics.png";
 
+import {
+	DiJavascript1,
+	DiHtml5,
+	DiCss3,
+	DiReact,
+	DiGit,
+	DiPython,
+} from "react-icons/di";
+import {
+	BiLogoTypescript,
+	BiLogoRedux,
+	BiLogoTailwindCss,
+	BiDotsHorizontalRounded,
+} from "react-icons/bi";
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiFastapi } from "react-icons/si";
+
 export const links = [
 	{
 		name: "Home",
@@ -86,15 +103,16 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-	{ name: "HTML", icon: "" },
-	{ name: "CSS", icon: "" },
-	{ name: "JavaScript", icon: "" },
-	{ name: "TypeScript", icon: "" },
-	{ name: "React", icon: "" },
-	{ name: "Next.js", icon: "" },
-	{ name: "Git", icon: "" },
-	{ name: "Tailwind", icon: "" },
-	{ name: "Redux", icon: "" },
-	{ name: "Python", icon: "" },
-	{ name: "FastAPI", icon: "" },
+	{ name: "HTML", icon: React.createElement(DiHtml5) },
+	{ name: "CSS", icon: React.createElement(DiCss3) },
+	{ name: "JavaScript", icon: React.createElement(DiJavascript1) },
+	{ name: "TypeScript", icon: React.createElement(BiLogoTypescript) },
+	{ name: "React", icon: React.createElement(DiReact) },
+	{ name: "Next.js", icon: React.createElement(TbBrandNextjs) },
+	{ name: "Git", icon: React.createElement(DiGit) },
+	{ name: "Tailwind", icon: React.createElement(BiLogoTailwindCss) },
+	{ name: "Redux", icon: React.createElement(BiLogoRedux) },
+	{ name: "Python", icon: React.createElement(DiPython) },
+	{ name: "FastAPI", icon: React.createElement(SiFastapi) },
+	{ name: "", icon: React.createElement(BiDotsHorizontalRounded) },
 ] as const;

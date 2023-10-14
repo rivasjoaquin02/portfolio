@@ -12,7 +12,7 @@ export function Header() {
 
 	return (
 		<motion.header
-			className="fixed top-6 left-1/2 z-[999]"
+			className="fixed top-0 sm:top-6 left-1/2 z-[999] w-full sm:w-[36rem]"
 			initial={{
 				opacity: 0,
 				y: -100,
@@ -25,10 +25,10 @@ export function Header() {
 			}}
 		>
 			<nav
-				className="bg-gray-50/70 backdrop-blur-[0.5rem] px-3 py-1 rounded-xl 
-                border border-black/20 shadow-lg shadow-black/[0.03]"
+				className="bg-gray-50/70 backdrop-blur-[0.5rem] p-5 sm:px-3 sm:py-1 sm:rounded-xl 
+                border border-black/20 shadow-lg shadow-black/[0.03] "
 			>
-				<ul className="flex gap-4 h-10 py-1">
+				<ul className="flex flex-wrap sm:flex-nowrap gap-3 sm:h-10 sm:py-1">
 					{links.map((link, idx) => (
 						<li
 							key={idx}
