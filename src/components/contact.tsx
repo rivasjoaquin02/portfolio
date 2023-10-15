@@ -18,7 +18,7 @@ export function Contact() {
 		<section ref={ref} id="contact" className="px-8 mb-28">
 			<SectionHeader>Contact me</SectionHeader>
 
-			<p className="mb-4">
+			<p className="mb-4 flex justify-center">
 				Contact me directly at{" "}
 				<a className="underline" href="mailto:rivasjoaquin02@gmail.com">
 					rivasjoaquin02@gmail.com
